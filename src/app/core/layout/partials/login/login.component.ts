@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
 
     ngOnInit() {
         this.staffService.getUser().subscribe(x => {
+          console.log(x);
             this.allUsers = x;
         }, error => {
             console.log(error);
